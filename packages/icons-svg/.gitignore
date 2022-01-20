@@ -30,6 +30,7 @@ inline-namespaced-svg
 !docs/inline-svg
 es
 lib
+umd
 
 # docz
 .docz

@@ -23,6 +23,7 @@ yarn-error.log*
 # IDE
 .idea
 .vscode
+.history
 
 # lock
 package-lock.json

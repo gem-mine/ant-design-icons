@@ -1,3 +1,32 @@
+## Why Fork 为什么Fork
+
+一般 @ant-design/icons-svg 不会经常变更
+
+执行以下操作前，如果已经安装过相应依赖，建议先执行 `npm run clean`
+
+1. @ant-design/icons-svg 打包生成 umd 格式
+    ```shell
+    npm run bootstrap
+    npm run icons:generate
+    cd ./packages/icons-svg
+    npm run build:umd
+    ```
+2. 将生成的umd，上传到cdn上
+- 复制 `./packages/icons-svg/umd` 下的 `umd-x.x.x.js`
+- 粘贴到 [common-static-content](http://git.sdp.nd/app-web/common-static-content/-/tree/develop) `asset/fish/font/svg` 下
+    ```shell
+    npm run upload
+    ```
+#### feat/original-icons
+与 master 保持一致，将 @ant-design/icons-svg 打包生成 umd 格式并上传 cdn
+#### feat/japan-icons
+与 master 保持一致，替换 `/packages/icons-svg/svg/outlined` 下的五个日本主题 icon，此时需要重新生成 src
+
+```shell
+npm run icons:generate
+```
+同理将 @ant-design/icons-svg 打包生成 umd 格式并上传 cdn
+
 <p align="center">
 <img
  width="450px" alt="logo" src="https://user-images.githubusercontent.com/15819224/45196822-c120ff00-b290-11e8-83ca-eb76378f5cc1.png" />
