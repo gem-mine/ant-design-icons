@@ -3,8 +3,8 @@ const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const { terser } = require('rollup-plugin-terser'); // 压缩
 
 const pkg = require('./package.json');
-const fileName = `umd-${pkg.version}.js`;
-const banner = `/*! ${pkg.name} ${pkg.version} */`;
+const fileName = `umd-${pkg.version}-ja.js`;
+const banner = `/*! ${pkg.name} ${pkg.version}-ja */`;
 
 const config = {
   input: './src/index.ts',
